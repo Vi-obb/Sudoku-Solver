@@ -16,6 +16,11 @@ for (let i = 0; i < squares; i++) {
     inputElement.setAttribute('type', 'number');
     inputElement.setAttribute('min', '1');
     inputElement.setAttribute('max', '9');
+    inputElement.classList.add('h-m', 'w-m', 'border-1', 'border-solid', 'border-gray-300', 'text-center', 'font-sans', 'text-bold', 'text-xl', 'focus:outline-none');
+    // inputElement.classList.add('w-m');
+    // inputElement.classList.add('border-solid');
+    // inputElement.classList.add('border-1');
+    // inputElement.classList.add('border-gray-300');
     puzzleBoard.appendChild(inputElement);
 
     if (
@@ -25,7 +30,7 @@ for (let i = 0; i < squares; i++) {
         ((i % 9 === 0 || i % 9 === 1 || i % 9 === 2) && i > 53) ||
         ((i % 9 === 6 || i % 9 === 7 || i % 9 === 8) && i > 53)
     ) {
-        inputElement.classList.add('odd-section');
+        inputElement.classList.add('bg-blue-500', 'text-white');
     }
 }
 
