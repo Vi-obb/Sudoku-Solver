@@ -17,10 +17,6 @@ for (let i = 0; i < squares; i++) {
     inputElement.setAttribute('min', '1');
     inputElement.setAttribute('max', '9');
     inputElement.classList.add('h-m', 'w-m', 'border-1', 'border-solid', 'border-gray-300', 'text-center', 'font-sans', 'text-bold', 'text-xl', 'focus:outline-none');
-    // inputElement.classList.add('w-m');
-    // inputElement.classList.add('border-solid');
-    // inputElement.classList.add('border-1');
-    // inputElement.classList.add('border-gray-300');
     puzzleBoard.appendChild(inputElement);
 
     if (
@@ -31,6 +27,8 @@ for (let i = 0; i < squares; i++) {
         ((i % 9 === 6 || i % 9 === 7 || i % 9 === 8) && i > 53)
     ) {
         inputElement.classList.add('bg-blue-500', 'text-white');
+    } else {
+        inputElement.classList.add('text-blue-500');
     }
 }
 
@@ -55,6 +53,7 @@ function populateValues(solvable, solution) {
             input.value = solution[index];
         })
         soldisp.innerText = 'Here you go!';
+        soldisp.classList.add('font-mono', 'text-2xl', 'text-blue-500', 'text-center');
     } else {
         soldisp.innerText = 'Sorry, no solution :(';
     }
