@@ -1,5 +1,5 @@
 # Sudoku-Solver
-Sudoku solver helps you to solve a sudoku puzzle with just a feww guesses using an API.
+Sudoku solver helps you to solve a sudoku puzzle with just a few guesses using an API.
 
 ## How To Use
 - Enter some figures from your puzzle.
